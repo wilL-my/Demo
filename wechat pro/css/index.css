@@ -1,0 +1,800 @@
+body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;font-size:12px;}
+
+ol,ul{margin:0;padding:0;list-style:none;}
+
+a{text-decoration:none;}
+
+img{border:none;}
+/***************************************************************/
+
+/**********/
+body{
+    font-family: Helvetica,"San Francisco","Microsoft Yahei","微软雅黑",Heiti SC;
+}
+
+.wx-logo{
+    z-index: 98;
+    position: absolute;
+    width: 135px;
+    height: 55px;
+    left: 143px;
+    top:40px;
+}
+
+.arrow-down{
+    position: fixed;
+    bottom:10px;
+    left: 50%;
+    z-index: 98;
+    animation: arrow 1s linear infinite alternate;
+}
+
+.arrow-down img{
+    width: 70%;
+}
+
+@keyframes arrow {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+/*头部*/
+.head-wrap2{
+    background: url("../images/01-bgc.jpg") center center;
+    background-size: cover;
+    height: 550px;
+}
+
+
+.head-wrap .head{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    text-align: center;
+    vertical-align:middle;
+    position: absolute;
+    z-index: 98;
+    width: 100%;
+}
+
+.head-wrap .head .logo{
+    width: 200px;
+    margin-left: -50px;
+    margin-right: 320px;
+    opacity: 0;
+}
+
+.head-wrap .head img{
+    height: 40px;
+}
+
+/*导航栏*/
+.head-wrap .head .nav{
+    height: 30px;
+    width: 1000px;
+}
+
+.head-wrap .head .nav ul{
+    text-align: center;
+}
+
+.head-wrap .head .nav ul li{
+    display: inline-block;
+    float:left;
+    padding-left: 80px;
+    color: #585c60;
+    font-size: 16px;
+    position: relative;
+    -webkit-transition: color .15s linear;
+    -moz-transition: color .15s linear;
+    -o-transition: color .15s linear;
+    transition: color .15s linear;
+    padding-top: 12px;
+}
+
+.head-wrap .head .nav ul li a{
+    color: #ffffff;
+    font-size: 16px;
+    position: relative;
+}
+
+
+.head-wrap .head .nav ul li a:not(.index)::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #fff;
+    bottom:-8px;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    transition: all .5s ease-in-out;
+}
+
+.head-wrap .head .nav ul li a:not(.index):hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
+
+.head-wrap .head .nav ul li:first-child a{
+    border-bottom: 1px #fff solid;
+    padding-bottom: 8px;
+}
+
+.head-wrap .head .nav ul .weixin .cont img,
+.head-wrap .head .nav ul .weibo .cont img{
+    width: 24px;
+    height: 20px;
+    padding-right: 5px;
+
+}
+
+.head-wrap .head .nav ul .weixin .code-wx{
+    position: absolute;
+    display: none;
+    top:40px;
+    left: 15px;
+    width: 200px;
+    height: 250px;
+}
+
+/*导航栏变色*/
+.head.white {
+    animation: white 1s linear forwards;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+@keyframes white {
+    from{
+
+    }
+    to{
+        background-color: #fff;
+    }
+}
+
+.head.white .nav ul li a{
+    color: #000;
+    transition: all 1s linear;
+}
+
+.head.white .nav ul li:first-child a{
+    border-bottom: 1px #000 solid;
+}
+
+.head .nav ul li .shu{
+    float:left;width: 1px;height: 25px; background: #fff;
+}
+
+.head.white .nav ul li .shu{
+    background: #000;
+    transition: all 1s linear;
+}
+
+.head.white .nav ul .weixin .logo-wx {
+    content: url("../images/weixin_dark.png");
+    transition: all 1s linear;
+}
+
+.head.white .nav ul .weibo .logo-wb{
+    content: url("../images/weibo_dark.png");
+    transition: all 1s linear;
+}
+
+.wx-logo.white{
+    content:url("../images/logo-2.png");
+    transition: all 1s linear;
+}
+/*第一版文字*/
+.head-content{
+    width: 800px;
+    height: 28px;
+    position: absolute;
+    left: 170px;
+    top: 200px;
+
+}
+
+.head-content .head-content-text{
+    animation: head-content-text 1s ease-in-out forwards;
+}
+
+@keyframes head-content-text {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    80%{
+    translate3d(0px, 0px, 19px);
+    }
+    100%{
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+}
+
+.head-content .head-content-text h1{
+    color: #fff;
+    font-size: 52px;
+    font-weight: 400;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.head-content .head-content-text p{
+    color: #fff;
+    font-size: 19px;
+    margin-bottom: 51px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.head-content .head-content-download{
+    margin-top: 25%;
+    animation: head-content-download 1s ease-in-out forwards;
+}
+
+@keyframes head-content-download{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    80%{
+    translate3d(0px, 0px, 19px);
+    }
+    100%{
+        transform: translateX(10px);
+        opacity: 1;
+    }
+}
+
+.head-content .head-content-download a{
+    background: 0 0;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 148px;
+    height: 52px;
+    margin-right: 27px;
+    display: inline-block;
+    zoom: 1;
+    line-height: 52px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all .4s linear;
+}
+
+.head-content .head-content-download a:not(.mobile):hover{
+    background-color: #fff;
+    color: #3e94fc;
+}
+
+.head-content .head-content-download a:last-child:hover{
+    background-color: #317FD3;
+    color: #fff;
+}
+
+/*.head-content .head-content-download a:hover{*/
+/*    background: #fff;*/
+/*    color: #3e94fc;*/
+/*    transition: all .5s linear;*/
+/*}*/
+
+.head-content .head-content-download a:last-child{
+    background: #3e94fc;
+    border: 1px solid #3e94fc;
+}
+
+/*.head-content .head-content-download a:last-child:hover{*/
+/*    background: #317FD3;*/
+/*    color: #fff;*/
+/*    transition: all .5s linear;*/
+/*}*/
+
+/*第二版*/
+.contents02 .text02{
+    position: absolute;
+    top:200px;
+    left: 200px;
+    z-index: 10;
+}
+
+.contents02 .text02 h2{
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #585c60;
+}
+
+.contents02 .text02 p{
+    -moz-opacity: .8;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    font-size: 18px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #585c60;
+}
+
+.contents02 .appList{
+    width: 20%;
+    position: absolute;
+    top:18%;
+    right: 20%;
+    opacity: 0;
+}
+
+.contents02.now .appList{
+    animation: fly02 .7s linear forwards;
+}
+
+@keyframes fly02 {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.contents02 .apps img{
+    position: absolute;
+    opacity: 0;
+}
+
+.contents02.now .apps img{
+    animation: appfly02 .4s ease-in-out forwards .7s;
+}
+
+@keyframes appfly02{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*第三版*/
+.contents03 .chats{
+    margin: 0 auto;
+}
+
+.contents03 .chats .text03{
+    position: absolute;
+    top:400px;
+    left: 300px;
+    z-index: 10;
+}
+
+.contents03 .text03 h2{
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 42px;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #fff;
+}
+
+.contents03 .text03 p{
+    -moz-opacity: .8;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    font-size: 18px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: #fff;
+}
+
+.contents03 .chats .iphone{
+    left:5%;
+ }
+
+.contents03 .chats .iphone .iphone01{
+    display: block;
+    width: 5%;
+    position: absolute;
+    top: 200px;
+    left: 15%;
+    opacity: 1;
+}
+
+.contents03 .chats img:not(.iphone01){
+    display: block;
+    width: 17%;
+    top:310px;
+    left: 61.5%;
+    position: relative;
+    z-index: 99;
+    opacity: 0;
+
+}
+
+.contents03 .chats .chat3{
+    margin-left: -2px;
+}
+
+.contents03 .chats .chat7{
+    margin-top: 5px;
+    margin-left: 7px;
+}
+
+.contents03.now .chats img:not(.iphone01) {
+
+}
+
+.contents03.now .chats .chat1{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out .5s;
+}
+
+.contents03.now .chats .chat2{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 2s;
+}
+
+.contents03.now .chats .chat3{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 3s;
+}
+
+.contents03.now .chats .chat4{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 4s;
+}
+
+.contents03.now .chats .chat5{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 5s;
+}
+
+.contents03.now .chats .chat6{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 6s;
+}
+
+.contents03.now .chats .chat7{
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all .3s ease-in-out 7s;
+}
+
+.contents03 .contents03-2{
+    background-color: #84a2d4;
+}
+
+.contents03 .contents03-2 .text03{
+    position: absolute;
+    top:400px;
+    left: 30%;
+    z-index: 10;
+}
+
+.contents03 .contents03-2 .iphone02{
+    display: block;
+    width: 5%;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    opacity: 1;
+}
+
+.contents03 .contents03-3{
+    background-color: #d04759;
+}
+
+.contents03 .contents03-3 .text03{
+    position: absolute;
+    top:400px;
+    left: 55%;
+    z-index: 10;
+}
+
+.contents03 .contents03-3 .iphone03{
+    display: block;
+    width: 5%;
+    position: absolute;
+    top: 200px;
+    left: 65%;
+    opacity: 1;
+}
+
+.contents03 .contents03-3.flicker .iphone03{
+    animation: flicker .5s linear;
+}
+
+@keyframes flicker {
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+
+    }
+}
+
+.contents03 .contents03-4{
+    background-color: #8ac060;
+}
+
+.contents03 .contents03-4 .text03{
+    position: absolute;
+    top:400px;
+    left: 80%;
+    z-index: 10;
+}
+
+.contents03 .contents03-4 .iphone04{
+    display: block;
+    width: 5%;
+    position: absolute;
+    top: 200px;
+    left: 90%;
+    opacity: 1;
+}
+
+/*第四版*/
+.contents04 .content-text04{
+    top:10%;
+    position: relative;
+    width: 1150px;
+    padding: 68px 0 25px;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0 auto;
+}
+
+.contents04 .content-text04 p{
+    font-size: 24px;
+    line-height: 25px;
+    color: #585c60;
+    text-align: left;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contents04 .downloadApp{
+    padding: 68px 0 66px;
+    width: 1150px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.contents04 .downloadApp .qr{
+    height: 300px;
+    margin-top: 50px;
+}
+
+.contents04 .downloadApp .qr img{
+    height: 100%;
+
+}
+
+.contents04 .downloadApp .qr .send{
+    padding: 12px 0 0 103px;
+    position: relative;
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.contents04 .downloadApp .qr .send p{
+    font-size: 18px;
+    color: #797d80;
+    margin-bottom: 26px;
+    text-align: left;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.contents04 .downloadApp .send{
+    height: 56px;
+    padding: 0 10px 0 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 0;
+    width: 306px;
+    position: relative;
+    top:80px;
+}
+
+.contents04 .downloadApp .send .tel-input{
+    background-color: #ebeef1;
+    height: 56px;
+    width: 306px;
+    color: #585c60;
+    line-height: 56px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    padding: 0 10px 0 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 16px;
+    position: relative;
+    top:20px;
+    box-shadow: none;
+    border-style: none;
+}
+
+.contents04 .downloadApp .send .btn-input{
+    padding: 0 13px;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #2a83f2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    display: block;
+    max-width: 88px;
+}
+
+.contents04 .downloadLogo .downloadList{
+    min-width: 1150px;
+    padding-bottom: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contents04 .downloadLogo .downloadList li{
+    margin-left: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #bcbebf;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    line-height: 61px;
+    text-align: left;
+}
+
+.contents04 .downloadLogo .downloadList li a{
+    color: #818386;
+}
+
+.contents04 .downloadLogo .downloadList li .a-download{
+    opacity: 0;
+    font-size: 12px;
+    color: #2a83f2;
+    line-height: 14px;
+    transition: all .2s ease-in-out;
+}
+
+
+.contents04 .downloadLogo .downloadList li p{
+    display: inline-block;
+    font-size: 19px;
+    line-height: 21px;
+    vertical-align: middle;
+    transition: all .2s ease-in-out;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10%;
+}
+
+.contents04 .downloadLogo .downloadList li img{
+    display: inline-block;
+    zoom: 1;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 13px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.foot{
+    background-color: #fff;
+    min-width: 1150px;
+    padding-top: 17px;
+    width: 1150px;
+    margin: 0 auto;
+    height: 63px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8a8d8f;
+    border-top: 1px solid #e8e8e8;
+    position: absolute;
+    bottom:10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foot .copy{
+    float: left;
+    width: 50%;
+}
+
+.foot .friend-link{
+    float: left;
+    width: 50%;
+    text-align: right;
+    font-size: 12px;
+    height: 14px
+}
+
+.foot .friend-link li{
+    display: inline-block;
+    cursor: pointer;
+    zoom: 1;
+    height: 12px;
+}
+
+.foot .friend-link li a{
+    color: #8a8d8f;
+}
